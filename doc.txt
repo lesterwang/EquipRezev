@@ -1,0 +1,3 @@
+Lester: 07/29
+Really sometime I am very busy and I don't have enough time to write some code.
+In this case I will write down sth I think that is useful, like what I will do next, what should I learn for implement the system.
