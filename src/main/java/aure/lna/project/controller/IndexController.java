@@ -1,32 +1,27 @@
 package aure.lna.project.controller;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
+import java.util.Random;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class IndexController {
-    @RequestMapping(value = "/ajax", method = RequestMethod.GET)
-    public String index() {
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String ajax() {
         return "index";
     }
 
-    @RequestMapping("testAjax")
-    public void login(HttpServletRequest request, HttpServletResponse response) {
-        String result = "test json";
-        response.setContentType("application/json");
-
-        try {
-            PrintWriter writer = response.getWriter();
-            writer.write(result);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    @RequestMapping(value = "/ajaxtest", method = RequestMethod.GET)
+    public @ResponseBody String getTime() {
+        Random rand = new Random();
+        float r = rand.nextFloat() * 100;
+        String result = "<br>Next Random # is <b>" + r + "</b>.Generated on <b>" + new Date().toString()
+                + "</b>";
+        return result;
     }
 }
