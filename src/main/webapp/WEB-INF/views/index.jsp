@@ -2,13 +2,14 @@
 <html>
 <head>
 <!--<script type="text/javascript" src='./js/closure-library/closure/goog/base.js'></script>-->
+    <spring:url value="/resources/js/closure-library/closure/goog/base.js" var="base_js"></spring:url>
     <spring:url value="/resources/js/index.js" var="indexJs"></spring:url>
     <spring:url value="/resources/js/jquery-1.11.3.js" var="jqueryJs"></spring:url>
     <spring:url value="/resources/css/index.css" var="indexCss"></spring:url>
     
     <link type="text/css" rel="stylesheet" href="${indexCss}"></link>
     
-    <script type="text/javascript" src=${jqueryJs}></script>
+    <script type="text/javascript" src="${base_js}"></script>
     <script type="text/javascript" src="${indexJs}"></script>
 </head>
 <body>
