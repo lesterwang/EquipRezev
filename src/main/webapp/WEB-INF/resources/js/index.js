@@ -1,16 +1,20 @@
-function ajaxTest() {
-  $.ajax({
-    type: 'POST',
-    url: 'user/testAjax',
-    error: function(data) {
-      alert('error: ' + data);
-    },
-    success: function(data) {
-      alert('success: ' + data);
-    }
-  });
+goog.require('goog.net.XhrIo');
+/*function testAjax() {
+	$.ajax({
+		url: 'ajaxtest.html',
+		success: function(data) {
+			$('#result').html(data);
+		}
+	});
+}*/
+
+function testAjax() {
+	goog.net.XhrIo.send('ajaxtest', function(e) {
+		var xhr = e.target;
+		document.getElementById('result').innerText = xhr.getResponse();
+	});
 }
 
 (function() {
-  ajaxTest();
+	setInterval(testAjax, 3000);
 })();
