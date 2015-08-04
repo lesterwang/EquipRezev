@@ -4,12 +4,12 @@
 	<groupId>aure.lna.project</groupId>
 	<artifactId>EquipRezev</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>EquipRezev Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<springframework.version>4.1.7.RELEASE</springframework.version>
+		<springframework.version>4.2.0.RELEASE</springframework.version>
 		<slf4j.version>1.7.12</slf4j.version>
 		<log4j.version>1.2.17</log4j.version>
 		<junit.version>4.12</junit.version>
@@ -32,7 +32,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${springframework.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
@@ -43,22 +42,18 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>${springframework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${springframework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>${springframework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>${springframework.version}</version>
 		</dependency>
 
 		<!-- slf4j -->
@@ -144,6 +139,19 @@
 		</dependency>
 
 	</dependencies>
+	
+	<dependencyManagement>
+	   <dependencies>
+	       <dependency>
+	           <groupId>org.springframework</groupId>
+	           <artifactId>spring-framework-bom</artifactId>
+	           <version>${springframework.version}</version>
+	           <type>pom</type>
+	           <scope>import</scope>
+	       </dependency>
+	   </dependencies>
+	</dependencyManagement>
+	
 	<build>
 		<finalName>EquipRezev</finalName>
 		<plugins>
@@ -161,8 +169,8 @@
 				<version>2.10</version>
 				<configuration>
 					<workspace>./</workspace>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>true</downloadJavadocs>
+					<downloadSources>false</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
 					<wtpversion>2.0</wtpversion>
 				</configuration>
 			</plugin>
