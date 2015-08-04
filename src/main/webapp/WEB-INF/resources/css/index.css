@@ -1,32 +1,54 @@
 @CHARSET "UTF-8";
-h1{
-    font-family: Verdana;
+.header{
+    height: 50px;
+    display: block;
+    margin: auto;
+    font-size: 40px;
+    font-family: Verdana, serif;
     font-weight: bold;
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
-    color: darkorchid;
+    background-color: darkorchid;
+    float: left;
 }
-table {
-    border: #000000 1px solid;
-    background-color: #acd1b2;
-    float: right;
-    margin-right: 10px;
+.tb {
+    width: 90%;
+    height: auto;
+    font-family: Verdana;
+    text-align: center;
+    border: #00FFFF 1px solid;
+    background-color: azure;
+    margin: auto;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    clear: both;
 }
 thead {
-    font-family: Verdana;
-    text-align:left;
-    padding-top: 20px;
-    padding-bottom: 20px;
     color: fuchsia;
 }
 td {
-    height: 20px;
-    width: 75px;
+    height: 30px;
+    width: 100px;
+    color: black;
+    border-right: 1px dashed black;
+    border-bottom: dashed 1px black;
 }
-#Part1{
+.Part{
     width: 45%;
+    height: 80%;
+    margin: auto;
+    display: inline;
+    border: 2px dashed #00FFFF;
     float: left;
+    clear: both;
+}
+.footer{
+    height: 20px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-family: serif;
+    clear: both;
+    margin-top: 20px;
 }

@@ -13,14 +13,12 @@
     <script type="text/javascript" src="${indexJs}"></script>
 </head>
 <body>
-	<h1>NYU Shanghai ELS Reservation System</h1>
-	<div id="result"></div>
-	<div id="Part1">
+	<div class="header">NYU Shanghai ELS Reservation System</div>
+	<div class="Part">
 		<p>Please have a check with the availability before you come to
 			the desk for reservation!</p>
-		<table>
-			<thead colspan="2">Equipment Availability
-			</thead>
+		<table class="tb">
+			<thead colspan="2"><td>Equipment Availability</td></thead>
 			<tbody>
 				<tr>
 					<td>MacBook Air</td>
@@ -36,6 +34,10 @@
 				</tr>
 			</tbody>
 		</table>
+	</div>
+	<div class="footer">
+		<p class="footer">ATS @ NYUShanghai</p>
+		<p class="footer">Copyright 2015</p>
 	</div>
 </body>
 </html>
