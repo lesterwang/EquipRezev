@@ -14,6 +14,7 @@
 </head>
 <body>
 	<div class="header">NYU Shanghai ELS Reservation System</div>
+	<div id="result"></div>
 	<div class="Part">
 		<p>Please have a check with the availability before you come to
 			the desk for reservation!</p>

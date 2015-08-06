@@ -16,7 +16,7 @@ public class IndexController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String ajax() {
-        logger.info("Hello {}", "SLF4J");
+        logger.error("Hello {}", "SLF4J");
         return "index";
     }
 
