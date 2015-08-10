@@ -5,4 +5,7 @@ In this case I will write down something I think that is useful, like what I wil
 Lester: 08/07
 SSO: Single Sign On, 单点登录, a very useful technology.
 
-It seems I don't need SSO, I just need how to validate I have logined.
+It seems I don't need SSO, I just need how to validate I have login.
+
+Lester: 08/10
+It's right that I need use some new technique, I need try angular js to complete this project.
