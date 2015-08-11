@@ -14,7 +14,7 @@ import aure.lna.project.model.LoginForm;
 @RequestMapping("/login")
 public class LoginController {
     @RequestMapping(method = RequestMethod.GET)
-    public String showFOrm(ModelMap model) {
+    public String showForm(ModelMap model) {
         LoginForm loginForm = new LoginForm();
         model.addAttribute("loginForm", loginForm);
         return "login";

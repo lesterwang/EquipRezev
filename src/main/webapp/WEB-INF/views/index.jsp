@@ -3,14 +3,18 @@
 <head>
 <!--<script type="text/javascript" src='./js/closure-library/closure/goog/base.js'></script>-->
     <spring:url value="/resources/js/closure-library/closure/goog/base.js" var="base_js"></spring:url>
-    <spring:url value="/resources/js/index.js" var="indexJs"></spring:url>
     <spring:url value="/resources/js/jquery-1.11.3.js" var="jqueryJs"></spring:url>
     <spring:url value="/resources/css/index.css" var="indexCss"></spring:url>
+    <spring:url value="/resources/css" var="css"></spring:url>
+    <spring:url value="/resources/js" var="js"></spring:url>
+    <spring:url value="/resources/less" var="less"></spring:url>
+
+
+	<link rel="stylesheet/less" type="text/css" href="${less}/index.less"></head>
+    <%-- <link rel="stylesheet/css" type="text/css" href="${css}/index.css"></head> --%>
     
-    <link type="text/css" rel="stylesheet" href="${indexCss}"></link>
-    
-    <script type="text/javascript" src="${base_js}"></script>
-    <script type="text/javascript" src="${indexJs}"></script>
+    <script type="text/javascript" src="${js}/index.js"></script>
+    <script type="text/javascript" src="${js}/less.js"></script>
 </head>
 <body>
 	<div class="header">NYU Shanghai ELS Reservation System</div>
